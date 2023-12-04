@@ -1,0 +1,72 @@
+import { Modal, Box, Button, Typography, Stack, Backdrop } from "@mui/material";
+
+import useLocalStorageState from "use-local-storage-state";
+
+import { themes } from "../../themes";
+
+export const ConfirmModal = ({ isOpen, onCancel, onProceed }) => {
+  const [theme] = useLocalStorageState("theme");
+
+  const style = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 400,
+    bgcolor: themes[theme].body.backgroundColor,
+    borderRadius: "5px",
+    boxShadow: 24,
+    p: 4,
+  };
+
+  return (
+    <Modal
+      open={isOpen}
+      onClose={onCancel}
+      closeAfterTransition
+      slots={{ backdrop: Backdrop }}
+      slotProps={{
+        backdrop: {
+          timeout: 500,
+        },
+      }}
+    >
+      <Box sx={style}>
+        <Stack direction="column" gap={5}>
+          <Typography variant="h6">
+            Would you like to proceed with this action?
+          </Typography>
+          <Stack
+            direction="row"
+            gap={2}
+            justifyContent="space-between"
+            sx={{ margin: 1 }}
+          >
+            <Button
+              sx={{
+                backgroundColor: themes[theme].primary.buttonTextColor,
+                color: themes[theme].primary.color,
+                maxWidth: "200px",
+              }}
+              variant="outlined"
+              onClick={onCancel}
+            >
+              Cancel
+            </Button>
+            <Button
+              sx={{
+                backgroundColor: themes[theme].primary.color,
+                color: themes[theme].primary.buttonTextColor,
+                maxWidth: "200px",
+              }}
+              variant="contained"
+              onClick={onProceed}
+            >
+              Proceed
+            </Button>
+          </Stack>
+        </Stack>
+      </Box>
+    </Modal>
+  );
+};
