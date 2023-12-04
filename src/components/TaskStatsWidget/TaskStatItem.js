@@ -12,7 +12,7 @@ export const TaskStatItem = ({ title, data, subtitle }) => {
       sx={{
         color: "inherit",
         backgroundColor: themes[theme].primary.backgroundColor,
-        marginX:{xs:3}
+        marginX:{xs:2}
       }}
     >
       <Stack

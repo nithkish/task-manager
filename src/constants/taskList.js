@@ -86,4 +86,15 @@ export const TASK_LIST = [{
     status: 'New',
     phone: 12352779993
 },
+{
+    taskid:9,
+    contractNumber:123349435,
+    firstName: 'Nithin',
+    lastName:'Kishore',
+    sex:'Male',
+    dob:'15.02.1980',
+    address:'this is address,1',
+    status: 'New',
+    phone: 12352779993
+},
 ]

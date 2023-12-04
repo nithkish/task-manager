@@ -47,7 +47,7 @@ export const ConfirmModal = ({ isOpen, onCancel, onProceed }) => {
           >
             <Button
               sx={{
-                backgroundColor: themes[theme].primary.buttonTextColor,
+                backgroundColor: themes[theme].primary.softBg,
                 color: themes[theme].primary.color,
                 maxWidth: "200px",
               }}

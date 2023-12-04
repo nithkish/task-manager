@@ -15,8 +15,8 @@ export const MENU_CONFIG =[
         icon:<AssignmentTurnedInIcon/>
     },
     {
-        path:"/cases",
-        name:"Cases",
+        path:"/",
+        name:"Tasks List",
         icon:<WorkIcon/>
     },
     {

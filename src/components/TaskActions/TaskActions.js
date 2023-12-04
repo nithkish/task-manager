@@ -16,7 +16,7 @@ export const TaskActions = ({ onClick }) => {
         onClick={onClick}
         sx={{
           color: themes[theme].primary.color,
-          backgroundColor: themes[theme].primary.buttonTextColor,
+          backgroundColor: themes[theme].primary.softBg,
           maxWidth: "200px",
         }}
         variant="outlined"

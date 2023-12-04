@@ -10,7 +10,7 @@ export const themes = {
     },
     menu: {
       menuContent: "#fbfcfd",
-      icon: "#0098e5",
+      icon: "#ffffff",
       hover: {
         backgroundColor: "#c5e4ff",
         color: "#44596e",

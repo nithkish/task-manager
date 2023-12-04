@@ -5,7 +5,7 @@ import { hexToRgba } from "../../utils/hex-to-rgba";
 export const menuItemStyles = (theme) => ({
   root: {
     fontSize: "13px",
-    fontWeight: 400,
+    fontWeight: 600,
   },
   icon: {
     color: themes[theme].menu.icon,
