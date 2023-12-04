@@ -1,0 +1,1 @@
+export const ALERT_TEXT= 'Rule 334: The GOZ 2000 can only be billed from ages 7 to 18. For insured persons under the age of 6, only billable if the 6-year molar erupts prematurely.'
