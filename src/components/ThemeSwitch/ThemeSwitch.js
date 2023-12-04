@@ -12,6 +12,7 @@ export const ThemeSwitch = () => {
       sx={{ m: 1 }}
       checked={theme === "dark"}
       onChange={onChange}
+      theme={theme}
     />
   );
 };

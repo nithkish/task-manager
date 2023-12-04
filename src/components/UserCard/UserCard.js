@@ -1,13 +1,18 @@
 import { Stack, Typography } from "@mui/material";
 import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
+import useLocalStorageState from "use-local-storage-state";
+
+import { themes } from "../../themes";
 
 export const UserCard = ({ userName, userRole }) => {
+
+  const [theme] = useLocalStorageState("theme");
   return (
     <Stack direction='row' alignItems='center' gap={2}> 
       <AssignmentTurnedInIcon
         sx={{
           p: 1,
-          backgroundColor: "#EDEDED", // TODO: grey
+          backgroundColor: themes[theme].secondary.backgroundColor,
           borderRadius: "10px",
         }}
       />

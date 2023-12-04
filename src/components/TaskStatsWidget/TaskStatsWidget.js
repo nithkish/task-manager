@@ -1,10 +1,10 @@
-import { Stack, Box, Paper } from "@mui/material";
+import { Stack, Box } from "@mui/material";
 import { TaskStatItem } from "./TaskStatItem";
 import { useStatConfig } from "../../hooks/useStatsConfig";
 
 export const TaskStatsWidget = () => {
   const tasksStats = useStatConfig();
-  
+
   return (
     <Box marginX={{ xs: 1, md: 4 }} marginBottom={1}>
       <Stack direction="row" justifyContent="space-between" flexWrap="wrap" gap={1}>

@@ -15,6 +15,7 @@ export const TasksHead = ({ filter, handleFilterChange, handleSearch }) => {
         placeholder="Search (min. 3 char)..."
         onChange={handleSearch}
         fullWidth={true}
+        sx={{color:'inherit'}}
       />
       <FilterByStatus filter={filter} handleChange={handleFilterChange} />
     </Stack>

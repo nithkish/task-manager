@@ -7,11 +7,14 @@ import { TasksQueue } from "./TasksQueue";
 import { useTasksList } from "../../hooks/useTasksList";
 import { TasksHead } from "./TasksHead";
 import { StyledButton } from "./styled";
+import { themes } from "../../themes";
+
 
 export const TasksList = () => {
   const [theme] = useLocalStorageState("theme");
   const [filter, setfilter] = useState("All");
   const [search, setSearch] = useState("");
+  
 
   const navigate = useNavigate();
 
@@ -30,7 +33,10 @@ export const TasksList = () => {
 
   return (
     <Box marginX={{ xs: 1, md: 4 }}>
-      <Paper elevation={2}>
+      <Paper
+        elevation={2}
+        sx={{ color: "inherit", backgroundColor: themes[theme].primary.backgroundColor }}
+      >
         <Stack direction="column" marginX={{ xs: 1, md: 4 }}>
           <Typography variant="h6" marginTop={1}>
             Tasks List

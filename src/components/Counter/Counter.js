@@ -1,15 +1,27 @@
 import { Typography, Paper } from "@mui/material";
+import useLocalStorageState from "use-local-storage-state";
+
 import { useTasksStats } from "../../hooks/useTasksStats";
 import { CounterWidgetContainer } from "./styled";
 import { CustomCircularProgress } from "./CustomCircularProgress";
+import { themes } from "../../themes";
+
+
 
 export const Counter = () => {
+  const [theme] = useLocalStorageState("theme");
   const { percentByStatus, newTasks, completedTasks, escalatedTasks } =
     useTasksStats();
   return (
     <Paper
       elevation={4}
-      sx={{ height: "240px", marginX: { xs: 1 }, marginRight: { md: 3 } }}
+      sx={{
+        color: "inherit",
+        backgroundColor: themes[theme].primary.backgroundColor,
+        height: "240px",
+        marginX: { xs: 1 },
+        marginRight: { md: 3 },
+      }}
     >
       <CounterWidgetContainer>
         <CustomCircularProgress

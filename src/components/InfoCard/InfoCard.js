@@ -1,15 +1,18 @@
 import { Card, Box, Stack, Typography } from "@mui/material";
-import { useContext } from "react";
-import { useParams } from "react-router-dom";
+import useLocalStorageState from "use-local-storage-state";
 
 import { NameCard } from "./NameCard";
 import { LabelText } from "../LabelText";
-import { TaskContext } from "../../App";
+import { themes } from "../../themes";
 
-export const InfoCard = ({currentTask}) => {
+export const InfoCard = ({ currentTask }) => {
+  const [theme] = useLocalStorageState("theme");
   return (
     <Box sx={{ margin: { xs: 1, md: 2 }, maxWidth: "500px" }}>
-      <Card variant="outlined">
+      <Card
+        variant="outlined"
+        sx={{ color:'inherit', backgroundColor: themes[theme].primary.softBg }}
+      >
         {currentTask ? (
           <Stack direction="column">
             <Stack direction="row" justifyContent="space-between">
@@ -17,7 +20,10 @@ export const InfoCard = ({currentTask}) => {
                 firstName={currentTask.firstName}
                 lastName={currentTask.lastName}
               />
-              <LabelText label={"Contract Number"} data={currentTask.contractNumber} />
+              <LabelText
+                label={"Contract Number"}
+                data={currentTask.contractNumber}
+              />
             </Stack>
             <Stack direction="row" justifyContent="space-between">
               <LabelText label={"Gender"} data={currentTask.sex} />

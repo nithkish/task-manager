@@ -28,15 +28,20 @@ export const themes = {
       buttonTextColor: "#ffffff",
       focus:'#E3ECF7',
       softBlue: "linear-gradient(to right,#E3ECF7, #F5F9FE)",
-      labelTextColor:'#808080'
+      labelTextColor:'#808080',
+      backgroundColor: '#ffffff',
+      softBg:'#ffffff'
     },
     primaryDark: {
       color: "#004D99",
     },
+    secondary: {
+      backgroundColor:"#EDEDED"
+    }
   },
   dark: {
     body:{
-      backgroundColor : '#0b2948',
+      backgroundColor : '#12212e',
       color:'#ffffff'
     },
     sidebar: {
@@ -55,18 +60,23 @@ export const themes = {
       },
     },
     taskrow: {
-      backgroundColor: "#E3ECF7",
-      hoverBg:'#bfd4ed' //TODO
+      backgroundColor: "#344d6c",
+      hoverBg:'#111a26'
     },
     primary: {
       color: "#0074E8",
       buttonTextColor: "#ffffff",
       focus:'#E3ECF7',
-      softBlue: "linear-gradient(to right,#E3ECF7, #F5F9FE)",
-      labelTextColor:'#808080'
+      softBlue: "#1c3042",
+      labelTextColor:'#808080',
+      backgroundColor: '#1c3042',
+      softBg:'#182736'
     },
     primaryDark: {
-      color: "#004D99",
+      color: "#2196f3",
     },
+    secondary: {
+      backgroundColor:"#506881"
+    }
   },
 };

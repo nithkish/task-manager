@@ -18,7 +18,7 @@ export const CustomCircularProgress = ({ value,counterData }) => {
         <defs>
           <linearGradient id={idCSS} gradientTransform={"rotate(90)"}>
             <stop offset="16.29%" stopColor={themes[theme].primary.focus} />
-            <stop offset="85.56%" stopColor={themes[theme].primary.color} />
+            <stop offset="75.56%" stopColor={themes[theme].primary.color} />
           </linearGradient>
         </defs>
       </svg>

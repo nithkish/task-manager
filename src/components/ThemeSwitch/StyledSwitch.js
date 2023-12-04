@@ -19,12 +19,12 @@ export const StyledSwitch = styled(Switch)(({ theme }) => ({
         },
         '& + .MuiSwitch-track': {
           opacity: 1,
-          backgroundColor: theme.palette.mode === 'dark' ? '#8796A5' : '#aab4be',
+          backgroundColor: theme === 'dark' ? '#8796A5' : '#aab4be',
         },
       },
     },
     '& .MuiSwitch-thumb': {
-      backgroundColor: theme.palette.mode === 'dark' ? '#003892' : '#001e3c',
+      backgroundColor: theme === 'dark' ? '#003892' : '#001e3c',
       width: 32,
       height: 32,
       '&:before': {
@@ -43,7 +43,7 @@ export const StyledSwitch = styled(Switch)(({ theme }) => ({
     },
     '& .MuiSwitch-track': {
       opacity: 1,
-      backgroundColor: theme.palette.mode === 'dark' ? '#8796A5' : '#aab4be',
+      backgroundColor: theme === 'dark' ? '#8796A5' : '#aab4be',
       borderRadius: 20 / 2,
     },
   }));
