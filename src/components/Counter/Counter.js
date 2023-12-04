@@ -6,8 +6,6 @@ import { CounterWidgetContainer } from "./styled";
 import { CustomCircularProgress } from "./CustomCircularProgress";
 import { themes } from "../../themes";
 
-
-
 export const Counter = () => {
   const [theme] = useLocalStorageState("theme");
   const { percentByStatus, newTasks, completedTasks, escalatedTasks } =
@@ -21,6 +19,7 @@ export const Counter = () => {
         height: "240px",
         marginX: { xs: 1 },
         marginRight: { md: 3 },
+        minWidth: "256px",
       }}
     >
       <CounterWidgetContainer>
@@ -28,7 +27,7 @@ export const Counter = () => {
           value={percentByStatus(completedTasks.length + escalatedTasks.length)}
           counterData={completedTasks.length + escalatedTasks.length}
         />
-        <Typography variant="subtitle1" marginX={3} marginY={{ xs: 1, md: 3 }}>
+        <Typography variant="subtitle1" marginX={3} marginY={3}>
           {newTasks.length} more to reach the daily goal
         </Typography>
       </CounterWidgetContainer>

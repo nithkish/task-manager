@@ -25,7 +25,7 @@ export const TaskInfoWidget = ({ currentTask }) => {
             <Typography variant="subtitle2" fontWeight="600">
               Excerpt from Patient's file
             </Typography>
-            <Button onClick={navigateToTask}>{`To Tasks List >`}</Button>
+            <Button sx={{fontWeight:'600'}}onClick={navigateToTask}>{`To Tasks List >`}</Button>
           </Stack>
           <InfoCard currentTask={currentTask} />
         </Stack>
