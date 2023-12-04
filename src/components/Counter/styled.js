@@ -1,9 +1,8 @@
 import { Box, Stack } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { themes } from "../../themes";
 
 export const CounterTextContainer = styled(Box)(({ theme }) => ({
-  top: 0,
+  top: '30px',
   left: 0,
   bottom: 0,
   right: 0,

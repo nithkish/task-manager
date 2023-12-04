@@ -7,7 +7,7 @@ import { themes } from "../../themes";
 export const ConfirmModal = ({ isOpen, onCancel, onProceed }) => {
   const [theme] = useLocalStorageState("theme");
 
-  const style = {
+  const boxStyle = {
     position: "absolute",
     top: "50%",
     left: "50%",
@@ -31,11 +31,14 @@ export const ConfirmModal = ({ isOpen, onCancel, onProceed }) => {
         },
       }}
     >
-      <Box sx={style}>
-        <Stack direction="column" gap={5}>
-          <Typography variant="h6">
-            Would you like to proceed with this action?
-          </Typography>
+      <Box sx={boxStyle}>
+        <Stack direction="column" gap={5} >
+          <Stack direction="column" gap={2} alignItems='center'>
+            <Typography variant="h6" fontWeight='600'>Confirm Action!</Typography>
+            <Typography variant="subtitle2">
+              Would you like to proceed with this action?
+            </Typography>
+          </Stack>
           <Stack
             direction="row"
             gap={2}

@@ -1,7 +1,7 @@
 import { Suspense, useState, useMemo, createContext } from "react";
 import { RouterProvider } from "react-router-dom";
 import { CircularProgress, Box } from "@mui/material";
-import  GlobalStyles from "@mui/material/GlobalStyles";
+import GlobalStyles from "@mui/material/GlobalStyles";
 import useLocalStorageState from "use-local-storage-state";
 
 import { createRouter } from "./router/router";
@@ -21,7 +21,7 @@ export function App({ baseHref = "/" }) {
 
   const router = useMemo(() => createRouter(basename), [basename]);
 
-  const [theme] = useLocalStorageState("theme");
+  const [theme] = useLocalStorageState("theme", "light");
 
   return (
     <Suspense
@@ -38,11 +38,14 @@ export function App({ baseHref = "/" }) {
       }
     >
       <TaskContext.Provider value={value}>
-      <GlobalStyles
-        styles={{
-          body: { backgroundColor: themes[theme].body.backgroundColor, color:themes[theme].body.color }
-        }}
-      />
+        <GlobalStyles
+          styles={{
+            body: {
+              backgroundColor: themes[theme].body.backgroundColor,
+              color: themes[theme].body.color,
+            },
+          }}
+        />
         <RouterProvider router={router} />
       </TaskContext.Provider>
     </Suspense>

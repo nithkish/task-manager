@@ -27,7 +27,7 @@ export const themes = {
       color: "#0074E8",
       buttonTextColor: "#ffffff",
       focus:'#E3ECF7',
-      softBlue: "linear-gradient(#E3ECF7, #F5F9FE)",
+      softBlue: "linear-gradient(to right,#E3ECF7, #F5F9FE)",
       labelTextColor:'#808080'
     },
     primaryDark: {
@@ -61,7 +61,8 @@ export const themes = {
     primary: {
       color: "#0074E8",
       buttonTextColor: "#ffffff",
-      softBlue: "linear-gradient(#E3ECF7, #F5F9FE)",
+      focus:'#E3ECF7',
+      softBlue: "linear-gradient(to right,#E3ECF7, #F5F9FE)",
       labelTextColor:'#808080'
     },
     primaryDark: {
