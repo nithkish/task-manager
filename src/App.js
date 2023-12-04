@@ -1,4 +1,9 @@
-import { Suspense, useState, useMemo, createContext } from "react";
+import {
+  Suspense,
+  useState,
+  useMemo,
+  createContext
+} from "react";
 import { RouterProvider } from "react-router-dom";
 import { CircularProgress, Box } from "@mui/material";
 import GlobalStyles from "@mui/material/GlobalStyles";
@@ -21,7 +26,9 @@ export function App({ baseHref = "/" }) {
 
   const router = useMemo(() => createRouter(basename), [basename]);
 
-  const [theme] = useLocalStorageState("theme", "light");
+  const [theme] = useLocalStorageState("theme", {
+    defaultValue: "light",
+  });
 
   return (
     <Suspense
