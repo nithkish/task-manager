@@ -1,12 +1,19 @@
-import { HeadlineWrapper, NameText, Text } from "./styled";
 import useLocalStorageState from "use-local-storage-state";
 import { Stack } from "@mui/material";
 import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
+import {useNavigate} from 'react-router-dom'
+
+import { HeadlineWrapper, NameText, Text } from "./styled";
 
 export const TaskRow = ({ contract, name, status }) => {
   const [theme] = useLocalStorageState("theme");
+
+  const navigate = useNavigate();
+  const navigateToDetails = ()=>{
+    navigate(`./taskdetails/${contract}`)
+  }
   return (
-    <HeadlineWrapper theme={theme}>
+    <HeadlineWrapper theme={theme} onClick={navigateToDetails}>
       <Stack direction="row" gap={1}>
         <AssignmentTurnedInIcon />
         <Text>{contract}</Text>

@@ -9,11 +9,6 @@ export const useTasksStats = () => {
     [tasks]
   );
 
-  const pendingTasks = useMemo(
-    () => tasks.filter((task) => task.status !== "Done"),
-    [tasks]
-  );
-
   const escalatedTasks = useMemo(
     () => tasks.filter((task) => task.status === "Escalated"),
     [tasks]
@@ -30,8 +25,8 @@ export const useTasksStats = () => {
   );
 
   return {
+    tasks,
     completedTasks,
-    pendingTasks,
     escalatedTasks,
     newTasks,
     percentByStatus,

@@ -1,7 +1,8 @@
 export const themes = {
   light: {
     body:{
-      backgroundColor : '#FAFAFA'
+      backgroundColor : '#FAFAFA',
+      color:'black'
     },
     sidebar: {
       backgroundColor: "#ffffff",
@@ -19,7 +20,8 @@ export const themes = {
       },
     },
     taskrow: {
-      backgroundColor: "#E3ECF7", //TODO
+      backgroundColor: "#E3ECF7",
+      hoverBg:'#bfd4ed' //TODO
     },
     primary: {
       color: "#0074E8",
@@ -34,7 +36,8 @@ export const themes = {
   },
   dark: {
     body:{
-      backgroundColor : '#1b1b1b'
+      backgroundColor : '#0b2948',
+      color:'#ffffff'
     },
     sidebar: {
       backgroundColor: "#0b2948",
@@ -52,7 +55,8 @@ export const themes = {
       },
     },
     taskrow: {
-      backgroundColor: "#E3ECF7", //TODO
+      backgroundColor: "#E3ECF7",
+      hoverBg:'#bfd4ed' //TODO
     },
     primary: {
       color: "#0074E8",

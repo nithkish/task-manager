@@ -18,19 +18,19 @@ export const useStatConfig = () => {
       },
       {
         key: 2,
-        title: "New Tasks",
+        title: "New",
         data: `${generateDataString(newTasks.length)}`,
         subtitle: `${percentByStatus(newTasks.length)}% of the total`,
       },
       {
         key: 3,
-        title: "Escalated Tasks",
+        title: "Escalated",
         data: `${generateDataString(escalatedTasks.length)}`,
         subtitle: `${percentByStatus(escalatedTasks.length)}% of the total`,
       },
       {
         key: 4,
-        title: "Done Tasks",
+        title: "Done",
         data: `${generateDataString(completedTasks.length)}`,
         subtitle: `${percentByStatus(completedTasks.length)}% of the total`,
       },

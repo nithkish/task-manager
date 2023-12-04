@@ -4,7 +4,7 @@ import { useStatConfig } from "../../hooks/useStatsConfig";
 
 export const TaskStatsWidget = () => {
   const tasksStats = useStatConfig();
-  console.log(tasksStats);
+  
   return (
     <Box marginX={{ xs: 1, md: 4 }} marginBottom={1}>
       <Stack direction="row" justifyContent="space-between" flexWrap="wrap" gap={1}>

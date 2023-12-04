@@ -40,7 +40,7 @@ export function App({ baseHref = "/" }) {
       <TaskContext.Provider value={value}>
       <GlobalStyles
         styles={{
-          body: { backgroundColor: themes[theme].body.backgroundColor }
+          body: { backgroundColor: themes[theme].body.backgroundColor, color:themes[theme].body.color }
         }}
       />
         <RouterProvider router={router} />

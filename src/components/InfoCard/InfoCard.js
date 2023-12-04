@@ -6,15 +6,7 @@ import { NameCard } from "./NameCard";
 import { LabelText } from "../LabelText";
 import { TaskContext } from "../../App";
 
-export const InfoCard = () => {
-  const { contractNumber } = useParams();
-
-  const { tasks } = useContext(TaskContext);
-
-  const currentTask = tasks.find(
-    (task) => task.contractNumber == contractNumber
-  );
-
+export const InfoCard = ({currentTask}) => {
   return (
     <Box sx={{ margin: { xs: 1, md: 2 }, maxWidth: "500px" }}>
       <Card variant="outlined">
@@ -25,7 +17,7 @@ export const InfoCard = () => {
                 firstName={currentTask.firstName}
                 lastName={currentTask.lastName}
               />
-              <LabelText label={"Contract Number"} data={contractNumber} />
+              <LabelText label={"Contract Number"} data={currentTask.contractNumber} />
             </Stack>
             <Stack direction="row" justifyContent="space-between">
               <LabelText label={"Gender"} data={currentTask.sex} />

@@ -2,7 +2,7 @@ import { Button, Stack } from "@mui/material";
 import useLocalStorageState from "use-local-storage-state";
 
 import { themes } from "../../themes";
-export const TaskActions = () => {
+export const TaskActions = ({ onClick }) => {
   const [theme] = useLocalStorageState("theme");
   return (
     <Stack
@@ -11,8 +11,9 @@ export const TaskActions = () => {
       gap={4}
       margin={{ xs: 1, md: 3 }}
     >
-      <Button>✕ Skip</Button>
+      <Button onClick={onClick}>✕ Skip</Button>
       <Button
+        onClick={onClick}
         sx={{
           color: themes[theme].primary.color,
           backgroundColor: themes[theme].primary.buttonTextColor,
@@ -23,6 +24,7 @@ export const TaskActions = () => {
         Escalate
       </Button>
       <Button
+        onClick={onClick}
         sx={{
           backgroundColor: themes[theme].primary.color,
           color: themes[theme].primary.buttonTextColor,

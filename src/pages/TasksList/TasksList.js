@@ -1,19 +1,31 @@
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import useLocalStorageState from "use-local-storage-state";
-import { useContext } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { TasksQueue } from "./TasksQueue";
-import { TaskContext } from "../../App";
+import { useTasksList } from "../../hooks/useTasksList";
+import { TasksHead } from "./TasksHead";
 import { StyledButton } from "./styled";
 
 export const TasksList = () => {
   const [theme] = useLocalStorageState("theme");
-  const { tasks } = useContext(TaskContext);
+  const [filter, setfilter] = useState("All");
+  const [search, setSearch] = useState("");
+
   const navigate = useNavigate();
 
   const navigateToDetails = () => {
     navigate(`./taskdetails/${tasks[0].contractNumber}`);
+  };
+  const handleFilterChange = (e) => {
+    setfilter(e.target.value);
+  };
+
+  const tasks = useTasksList(filter, search);
+
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
   };
 
   return (
@@ -23,7 +35,12 @@ export const TasksList = () => {
           <Typography variant="h6" marginTop={1}>
             Tasks List
           </Typography>
-          <TasksQueue />
+          <TasksHead
+            filter={filter}
+            handleFilterChange={handleFilterChange}
+            handleSearch={handleSearch}
+          />
+          <TasksQueue tasks={tasks} />
           <StyledButton
             sx={{ marginBottom: { xs: 1, md: 3 } }}
             theme={theme}

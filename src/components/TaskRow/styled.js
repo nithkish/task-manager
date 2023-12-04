@@ -11,7 +11,11 @@ export const HeadlineWrapper = styled(Stack)(({ theme }) => ({
     borderRadius: '8px',
     position: 'relative',
     overflow: 'hidden',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    cursor:'pointer',
+    ":hover": {
+      backgroundColor:themes[theme].taskrow.hoverBg
+    }
   }))
   
   

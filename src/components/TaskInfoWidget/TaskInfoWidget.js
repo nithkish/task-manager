@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router-dom'
 
 import { InfoCard } from "../InfoCard";
 
-export const TaskInfoWidget = () => {
+export const TaskInfoWidget = ({currentTask}) => {
   const navigate = useNavigate();
   const navigateToTask = ()=>{
     navigate('/')
@@ -24,7 +24,7 @@ export const TaskInfoWidget = () => {
             </Typography>
             <Button onClick={navigateToTask}>{`To Tasks List >`}</Button>
           </Stack>
-          <InfoCard />
+          <InfoCard currentTask={currentTask}/>
         </Stack>
       </Paper>
     </Box>
