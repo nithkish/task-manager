@@ -43,17 +43,6 @@ export const TASK_LIST = [{
     phone: 12352779993
 },
 {
-    taskid:5,
-    contractNumber:16773456,
-    firstName: 'FIfi',
-    lastName:'Nair',
-    sex:'Female',
-    dob:'15.02.1930',
-    address:'this is address,5',
-    status: 'Done',
-    phone: 12352788993
-},
-{
     taskid:6,
     contractNumber:12034565,
     firstName: 'Will',
@@ -72,7 +61,7 @@ export const TASK_LIST = [{
     sex:'Male',
     dob:'15.06.1990',
     address:'this is address,7',
-    status: 'New',
+    status: 'Done',
     phone: 12352779993
 },
 {
@@ -88,7 +77,7 @@ export const TASK_LIST = [{
 },
 {
     taskid:9,
-    contractNumber:123349435,
+    contractNumber:12334943,
     firstName: 'Nithin',
     lastName:'Kishore',
     sex:'Male',
