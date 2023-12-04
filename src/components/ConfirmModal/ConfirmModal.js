@@ -33,7 +33,7 @@ export const ConfirmModal = ({ isOpen, onCancel, onProceed }) => {
     >
       <Box sx={boxStyle}>
         <Stack direction="column" gap={5} >
-          <Stack direction="column" gap={2} alignItems='center'>
+          <Stack direction="column" gap={2} alignItems='start'>
             <Typography variant="h6" fontWeight='600'>Confirm Action!</Typography>
             <Typography variant="subtitle2">
               Would you like to proceed with this action?
@@ -41,8 +41,8 @@ export const ConfirmModal = ({ isOpen, onCancel, onProceed }) => {
           </Stack>
           <Stack
             direction="row"
-            gap={2}
-            justifyContent="space-between"
+            gap={4}
+            justifyContent='flex-end'
             sx={{ margin: 1 }}
           >
             <Button
