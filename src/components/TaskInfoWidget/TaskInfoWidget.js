@@ -11,10 +11,10 @@ export const TaskInfoWidget = ({ currentTask }) => {
   return (
     <Box marginX={{ xs: 1, md: 2 }}>
       <Paper
-        elevation={3}
+        elevation={4}
         sx={{ color: "inherit", backgroundColor: "inherit" }}
       >
-        <Stack direction="column" marginY={{ xs: 1, md: 3 }}>
+        <Stack direction="column" marginY={{ xs: 1, md: 2 }}>
           <Stack
             direction="row"
             alignItems="center"

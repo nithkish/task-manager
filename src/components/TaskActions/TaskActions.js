@@ -9,7 +9,7 @@ export const TaskActions = ({ onClick }) => {
       direction="row"
       justifyContent="flex-end"
       gap={4}
-      margin={{ xs: 1, md: 3 }}
+      margin={{ xs: 1, md: 2 }}
     >
       <Button onClick={onClick}>✕ Skip</Button>
       <Button
