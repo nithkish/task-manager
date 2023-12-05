@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 import Image from "../../assets/images/background-image.png";
 import { MENU_CONFIG } from "../../config/menu-config";
-import { menuItemStyles } from "./menu-items-styles";
+import { menuItemStyles } from "./menuItemsStyles";
 import { hexToRgba } from "../../utils/hex-to-rgba";
 import { themes } from "../../themes";
 
