@@ -9,7 +9,7 @@ export const ThemeSwitch = () => {
   };
   return (
     <StyledSwitch
-      sx={{ m: 1 }}
+      sx={{ my: 1 }}
       checked={theme === "dark"}
       onChange={onChange}
       theme={theme}

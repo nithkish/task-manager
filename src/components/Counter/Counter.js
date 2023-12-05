@@ -17,8 +17,8 @@ export const Counter = () => {
         color: "inherit",
         backgroundColor: themes[theme].primary.backgroundColor,
         height: "240px",
-        marginX: { xs: 1 },
-        marginRight: { md: 3 },
+        margin: { xs: 1 },
+        marginRight: { md: 4 },
         minWidth: "256px",
       }}
     >
