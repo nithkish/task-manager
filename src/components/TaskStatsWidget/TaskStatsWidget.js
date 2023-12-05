@@ -6,7 +6,7 @@ export const TaskStatsWidget = () => {
   const tasksStats = useStatConfig();
 
   return (
-    <Box marginX={{ xs: 1, md: 4 }} marginBottom={3}>
+    <Box marginX={{ xs: 1, md: 2 }} marginBottom={3}>
       <Stack direction="row" justifyContent="space-between" flexWrap="wrap" gap={1}>
         {tasksStats.map((stat) => (
           <TaskStatItem
